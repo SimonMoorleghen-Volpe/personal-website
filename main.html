@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Simon MV</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="topbar-outer">
+        <p class="topbar-text">Simon Moorleghen-Volpe</p>
+    </div>
+
+    <div class="tab_container">
+            <div class="tab_bar">
+                <input type="radio" class="tab_radio" name="tab_pages" id="overview" checked value="about_content" onchange="radio_checked(value)">
+                <label for="overview" class="tab_label">About Me</label>
+                <input type="radio" class="tab_radio" name="tab_pages" id="projects" value="project_content" onchange="radio_checked(value)">
+                <label for="projects" class="tab_label">Past Projects</label>
+                <input type="radio" class="tab_radio" name="tab_pages" id="contact_info" value="contact_content" onchange="radio_checked(value)">
+                <label for="contact_info" class="tab_label">Contact Info</label>
+            </div>
+        <div class="tab_content_about" id="about_content">
+            <div class="tab_content_about_grid">
+                <div class="grid_item grid_item_image_1">
+                    <img src="img/Penn_state_logo.png" class="about_me_image_1">
+                </div>
+                <div class="grid_item grid_item_about">
+                    <p class="about_me_text" id="about_me_school_history">I graduated from Pennsylvania State University Main campus in 
+                        August 2022 with a bachelor of science in Computer Science. For my elective higher level courses,
+                        I chose Artificial Intelligence and Machine Learning. In addition, I took courses for technical writing,
+                        Database management,
+                    </p>
+                    <p class="about_me_text" id="about_me_hobbies">My hobbies include playing video games and watching documenteries 
+                        or videos that explain in detail historical events or how things work. I enjoy long-form content 
+                        much more than I do short-form content. I love when I can walk away from a video or documentary with
+                        a greater understanding of something than before I watched it.
+                    </p>
+                    <p class="about_me_text" id="about_me_coding_languages">The coding languages I am most proficient in are Python, C#, and C.<br> 
+                        <b>Python</b> was my most used language while attending Penn State, and I have used it for various 
+                        projects on my own.<br> 
+                        <b>C</b> is my second most used language while attending Penn State, particularly in higher level classes.<br>
+                        <b>C#</b> is the language I have used the most for my personal projects.<br>
+                        Additionally, I have used Java and SQL for classes, although
+                        my exposure to them is more limited than the prior mentioned languages.
+                    </p>
+                </div>
+                <div class="grid_item grid_item_image_2">
+                    <div class="grid_item_image_2_container">
+                        <img src="img/Personal_photo.jpeg" class="about_me_image_2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_content_project" id="project_content">
+            content past projects
+        </div>
+        <div class="tab_content_contact" id="contact_content">
+
+            <p class="tab_content_contact_text" >Phone Number: 412-477-4041</p>
+            <p class="tab_content_contact_text" >Email: wscvolpe@gmail.com</p>
+            <p class="tab_content_contact_text">I am most likely to respond to emails,</p>
+            <p class="tab_content_contact_text">I am most consistently available between 2pm and 4pm EST.</p>
+
+            
+        </div>
+    </div>
+</body>
