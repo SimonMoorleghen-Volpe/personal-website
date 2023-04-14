@@ -192,13 +192,53 @@ body {
 .tab_content_project {
     display:flex;
     display:none;
+    justify-content: center;
     height: 95%;
     width: 100%;
     background: linear-gradient( to right,
         white 0%,
         white 50%,
         darkblue 50%,
-        darkblue 100%);;
+        darkblue 100%);
+}
+.tab_content_project_container {
+    display:flex;
+    margin-top: auto;
+    height: 90%;
+    width: 90%;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    justify-content: top;
+    border: solid;
+    border-width: 4px;
+    border-color: black;
+}
+.tab_bar_project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: clamp(30px, 5vh, 45px);
+    margin-top: 0px;
+    background-color: black;
+}
+.tab_label_project {
+    background-color: darkgray;
+    border-color: black;
+    color:black;
+    border-radius: 10%;
+    margin-bottom: -10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: auto;
+}
+.tab_radio:checked+.tab_label_project{
+    color:darkblue;
+    background-color: rgb(255, 255, 255);
+    padding: 0vh 3vw 20px 3vw;
+    margin-bottom: -20px;
+    font-weight: bold;
 }
 
 

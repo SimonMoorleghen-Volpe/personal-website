@@ -17,11 +17,11 @@
 
     <div class="tab_container">
             <div class="tab_bar">
-                <input type="radio" class="tab_radio" name="tab_pages" id="overview" checked value="about_content" onchange="radio_checked(value)">
+                <input type="radio" class="tab_radio" name="tab_pages" id="overview" checked value="about_content" onchange="radio_tab_checked(value)">
                 <label for="overview" class="tab_label">About Me</label>
-                <input type="radio" class="tab_radio" name="tab_pages" id="projects" value="project_content" onchange="radio_checked(value)">
+                <input type="radio" class="tab_radio" name="tab_pages" id="projects" value="project_content" onchange="radio_tab_checked(value)">
                 <label for="projects" class="tab_label">Past Projects</label>
-                <input type="radio" class="tab_radio" name="tab_pages" id="contact_info" value="contact_content" onchange="radio_checked(value)">
+                <input type="radio" class="tab_radio" name="tab_pages" id="contact_info" value="contact_content" onchange="radio_tab_checked(value)">
                 <label for="contact_info" class="tab_label">Contact Info</label>
             </div>
         <div class="tab_content_about" id="about_content">
@@ -57,7 +57,14 @@
             </div>
         </div>
         <div class="tab_content_project" id="project_content">
-            content past projects
+            <div class="tab_content_project_container">
+                <div class="tab_container" style="background-color:rgba(0, 0, 0, 0.5)">
+                    <div class="tab_bar_project">
+                        <input type="radio" class="tab_radio" name="project_pages" id="joint_game_radio" value="joint_game" onchange="none()">
+                        <label for="joint_game_radio" class="tab_label_project">Joint Game</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="tab_content_contact" id="contact_content">
 
