@@ -57,23 +57,22 @@
             </div>
         </div>
         <div class="tab_content_project" id="project_content">
-            <div class="tab_content_project_container">
-                <div class="tab_container" style="background-color:rgba(0, 0, 0, 0.5)">
-                    <div class="tab_bar_project">
-                        <input type="radio" class="tab_radio" name="project_pages" id="joint_game_radio" value="joint_game" onchange="none()">
-                        <label for="joint_game_radio" class="tab_label_project">Joint Game</label>
-                    </div>
-                </div>
+            <div class="tab_project_tab_container">
+                <input type="radio" class="tab_project_radio" name="project_tabs" id="joint_game_radio" value="joint_game" onchange="radio_project_checked(value)">
+                <label for="joint_game_radio" class="tab_project_label">Joint Game</label>
+                <input type="radio" class="tab_project_radio" name="project_tabs" id="test_radio" value="test_tab" onchange="radio_project_checked(value)">
+                <label for="test_radio" class="tab_project_label">test label</label>
             </div>
+            <div class="tab_project_content" id="joint_game">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4A0rD7JijyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="tab_project_content" id="test_tab">blah 2</div>
         </div>
         <div class="tab_content_contact" id="contact_content">
-
             <p class="tab_content_contact_text" >Phone Number: 412-477-4041</p>
             <p class="tab_content_contact_text" >Email: wscvolpe@gmail.com</p>
             <p class="tab_content_contact_text">I am most likely to respond to emails,</p>
             <p class="tab_content_contact_text">I am most consistently available between 2pm and 4pm EST.</p>
-
-            
         </div>
     </div>
 </body>

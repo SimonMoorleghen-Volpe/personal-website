@@ -10,18 +10,23 @@ html {
 }
 
 body {
-    background-color: rgb(154, 154, 154);
+    background: linear-gradient( to right,
+        white 0%,
+        white 50%,
+        darkblue 50%,
+        darkblue 100%);;
     margin:0px;
     padding:0px;
     height: 100vh;
     height:100svh;
     display: flex;
     flex-direction: column;
-
 }
 
 .topbar-outer {
     width: 100vw;
+    flex: 0 1 auto;
+    min-height: 75px;
     background: linear-gradient(to right,
         white 0%,
         white 50%,
@@ -36,17 +41,18 @@ body {
             background-clip: text;
     filter: invert(1) grayscale(1) contrast(5);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight:900;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .tab_container{
+    flex: 0 1 auto;
     display:flex;
     flex-wrap: wrap;
     background-color: black;
     justify-content: space-evenly;
-    height: 100%;
+    min-height: 10%;
     padding:0px;
     margin:0px;
     vertical-align: top;
@@ -91,6 +97,7 @@ body {
 
 
 .tab_content_about {
+    flex: 1 1 auto;
     display: flex;
     width: 100%;
     height: 95%;
@@ -98,7 +105,7 @@ body {
         white 0%,
         white 50%,
         darkblue 50%,
-        darkblue 100%);;
+        darkblue 100%);
 }
 .tab_content_about_grid {
     margin-top: 1%;
@@ -190,9 +197,11 @@ body {
 
 
 .tab_content_project {
+    flex: 1 1 auto;
     display:flex;
     display:none;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: center safe;
     height: 95%;
     width: 100%;
     background: linear-gradient( to right,
@@ -201,48 +210,52 @@ body {
         darkblue 50%,
         darkblue 100%);
 }
-.tab_content_project_container {
+.tab_project_tab_container {
+    flex: 0 1 auto;
+    height: auto;
+    width: 100;
+    padding-top: 0.25em;
+    gap: 0.5em;
+    background: linear-gradient( to bottom,
+        white 0%,
+        white 50%,
+        black 50%,
+        black 100%);
     display:flex;
-    margin-top: auto;
-    height: 90%;
-    width: 90%;
-    margin-top: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    justify-content: top;
-    border: solid;
-    border-width: 4px;
-    border-color: black;
-}
-.tab_bar_project {
-    display: flex;
+    align-content: start;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    height: clamp(30px, 5vh, 45px);
-    margin-top: 0px;
-    background-color: black;
 }
-.tab_label_project {
-    background-color: darkgray;
-    border-color: black;
-    color:black;
-    border-radius: 10%;
-    margin-bottom: -10px;
+.tab_project_radio {
+    display: none;
+}
+.tab_project_label {
+    background-color: white;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: auto;
+    font-size: .8rem;
+    border-width: 0.5em;
+    border-color: black;
+    border: solid;
+    border-radius: 25% 25% 0% 0%;
 }
-.tab_radio:checked+.tab_label_project{
+.tab_project_radio:checked+.tab_project_label{
     color:darkblue;
-    background-color: rgb(255, 255, 255);
-    padding: 0vh 3vw 20px 3vw;
-    margin-bottom: -20px;
+    border-color: black;
     font-weight: bold;
+    font-size: 1rem;
 }
+.tab_project_content {
+    flex: 1 1 auto;
+    display: flex;
+    display: none;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+ 
 
 
 .tab_content_contact {
+    flex: 1 1 auto;
     display:flex;
     justify-content: center;
     height: 95%;
