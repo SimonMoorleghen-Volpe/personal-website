@@ -58,7 +58,7 @@
                     id="joint_game_radio" value="joint_game" onchange="radio_project_checked(value)">
                 <label for="joint_game_radio" class="tab_project_label">Joint Game</label>
                 <input type="radio" class="tab_project_radio" name="project_tabs" 
-                    id="fast_paced_platformer_radio" value="test_tab" onchange="radio_project_checked(value)">
+                    id="fast_paced_platformer_radio" value="fast_paced_platformer" onchange="radio_project_checked(value)">
                 <label for="fast_paced_platformer_radio" class="tab_project_label">Fast Platformer</label>
                 <input type="radio" class="tab_project_radio" name="project_tabs" 
                     id="LoL_subreddit_language_radio" value="LoL_subreddit_ngram_model" onchange="radio_project_checked(value)">
@@ -75,13 +75,22 @@
                 </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/4A0rD7JijyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="tab_project_content" id="test_tab">
-
+            <div class="tab_project_content" id="fast_paced_platformer">
+                <p class="tab_project_text">
+                    I started this project to learn mroe about the Godot game engine and to personally implement some design strategies I have seen in videos. My current ideas for this game
+                    is that levels are randomly generated from a premade selection of levels like in other games such as <i>The Binding of Isaac</i>. Upon collecting the cookies or reaching the end the player earns points with the goal of earning as
+                    many points as possible.
+                </p>
+                <p class="tab_project_text">
+                    What is currently implemented is the player movement, the collectable cookies, and the level generator. The game currently supports both keyboard and
+                    controller inputs.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5-OUFR5rISo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="tab_project_content" id="LoL_subreddit_ngram_model">
                 <p class="tab_project_text">
-                    Using the Praw library, I scraped comments from the top 750 posts of all time from the League of Legends subreddit. 
-                    With that data saved, I then created a program to take in a number to create an ngram language model using that data.                    
+                    Using the Praw library, I scraped comments from the top 750 posts of all time from the <i>League of Legends</i> subreddit community. 
+                    With that data saved, I then created a program to take in a number <i>n</i> to create an n-gram language model using that data.                    
                 </p>
                 <p class="tab_project_text">
                     As I was creating and saving the models, I ran into issues of optimization where it could take dozens of minutes to finish creating a model when applying smoothing.
