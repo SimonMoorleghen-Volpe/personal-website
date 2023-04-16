@@ -10,11 +10,7 @@ html {
 }
 
 body {
-    background: linear-gradient( to right,
-        white 0%,
-        white 50%,
-        darkblue 50%,
-        darkblue 100%);;
+
     margin:0px;
     padding:0px;
     height: 100vh;
@@ -100,18 +96,14 @@ body {
     flex: 1 1 auto;
     display: flex;
     width: 100%;
-    height: 95%;
-    background: linear-gradient( to right,
-        white 0%,
-        white 50%,
-        darkblue 50%,
-        darkblue 100%);
+    background: white;
 }
 .tab_content_about_grid {
     margin-top: 1%;
     margin-bottom: 1%;
     margin-right: 1.5%;
     margin-left: 1.5%;
+    min-height: 30rem;
     box-shadow: 0px 0px 15px rgba(0, 0, 139, 0.717);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -167,19 +159,20 @@ body {
     display: flex;
     align-items: top;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap:clamp(1em, 2vh + 1vw, 3em);
+    background-color: rgba(0, 0, 139, 0.3);
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: -1;
-
 }
-.about_me_text {
-    word-wrap: break-word;    
-    overflow: hidden;
+.about_me_text {  
+    margin-top: auto;
+    margin-bottom:auto;
+    overflow:overflow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: clamp(1rem, 1vw + 1vh, 1.5rem);
-    color: rgb(255, 255, 255);
+    font-size: clamp(1rem, 1vh + 1vw, 1.5rem);
+    color: black;
     margin-left:4px;
     margin-right: 4px;
 }
@@ -189,7 +182,7 @@ body {
     object-fit: contain;
 }
 .about_me_image_2 {
-    margin-left: clamp(-15px, -13%, -200px);
+    margin-left: -1 * clamp(15px, 13%, 200px);
     width: clamp(150px, 130%, 400px);
     height: auto;
     object-fit:cover;
@@ -202,20 +195,21 @@ body {
     display:none;
     flex-flow: column wrap;
     justify-content: center safe;
-    height: 95%;
+    height: 100%;
     width: 100%;
-    background: linear-gradient( to right,
-        white 0%,
-        white 50%,
-        darkblue 50%,
-        darkblue 100%);
+    border: solid;
+    border-width: 0.5em;
+    border-color:  white;
+    background-color: white;
 }
 .tab_project_tab_container {
     flex: 0 1 auto;
     height: auto;
     width: 100;
     padding-top: 0.25em;
-    gap: 0.5em;
+    margin-bottom:-1vh;
+    margin-left: 0.3em;
+    gap: 0.4em;
     background: linear-gradient( to bottom,
         white 0%,
         white 50%,
@@ -241,17 +235,29 @@ body {
 .tab_project_radio:checked+.tab_project_label{
     color:darkblue;
     border-color: black;
+    border-bottom-width: 0px;
     font-weight: bold;
     font-size: 1rem;
 }
 .tab_project_content {
     flex: 1 1 auto;
+    border:solid;
+    border-left-width: 0.5em;
+    border-right-width:0.5em;
+    border-bottom-width: 0.5em;
+    border-color: black;
     display: flex;
+    flex-direction: column;
+    gap: 2em;
     display: none;
     padding-left: 2em;
     padding-top: 1em;
 }
- 
+.tab_project_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(1rem, 1vh + 1.5vw, 1.5rem);
+    color: black;
+}
 
 
 .tab_content_contact {
@@ -261,24 +267,17 @@ body {
     height: 95%;
     width: 100%;
     display: none;
-    background: linear-gradient( to right,
-        white 0%,
-        white 50%,
-        darkblue 50%,
-        darkblue 100%);
+    background-color: white;
 }
 .tab_content_contact_text {
     word-wrap: break-word;
     overflow: hidden;
-    text-align: right;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: clamp(1rem, 1vw + 1vh, 2rem);
     padding-right: min(16px, 2%);
     color: transparent;
-    background: inherit;
-    -webkit-background-clip: text;
-            background-clip: text;
-    filter: invert(2) grayscale(1) contrast(2);
+    color:black;
 }
 
 

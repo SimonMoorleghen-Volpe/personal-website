@@ -16,38 +16,31 @@
     </div>
 
     <div class="tab_container">
-            <div class="tab_bar">
-                <input type="radio" class="tab_radio" name="tab_pages" id="overview" checked value="about_content" onchange="radio_tab_checked(value)">
-                <label for="overview" class="tab_label">About Me</label>
-                <input type="radio" class="tab_radio" name="tab_pages" id="projects" value="project_content" onchange="radio_tab_checked(value)">
-                <label for="projects" class="tab_label">Past Projects</label>
-                <input type="radio" class="tab_radio" name="tab_pages" id="contact_info" value="contact_content" onchange="radio_tab_checked(value)">
-                <label for="contact_info" class="tab_label">Contact Info</label>
-            </div>
+        <div class="tab_bar">
+            <input type="radio" class="tab_radio" name="tab_pages" id="overview" checked value="about_content" onchange="radio_tab_checked(value)">
+            <label for="overview" class="tab_label">About Me</label>
+            <input type="radio" class="tab_radio" name="tab_pages" id="projects" value="project_content" onchange="radio_tab_checked(value)">
+            <label for="projects" class="tab_label">Past Projects</label>
+            <input type="radio" class="tab_radio" name="tab_pages" id="contact_info" value="contact_content" onchange="radio_tab_checked(value)">
+            <label for="contact_info" class="tab_label">Contact Info</label>
+        </div>
+
+        <!-- below is the tab for the About Me tab -->
+
         <div class="tab_content_about" id="about_content">
             <div class="tab_content_about_grid">
                 <div class="grid_item grid_item_image_1">
                     <img src="img/Penn_state_logo.png" class="about_me_image_1">
                 </div>
                 <div class="grid_item grid_item_about">
-                    <p class="about_me_text" id="about_me_school_history">I graduated from Pennsylvania State University Main campus in 
-                        August 2022 with a bachelor of science in Computer Science. For my elective higher level courses,
-                        I chose Artificial Intelligence and Machine Learning. In addition, I took courses for technical writing,
-                        Database management,
-                    </p>
-                    <p class="about_me_text" id="about_me_hobbies">My hobbies include playing video games and watching documenteries 
-                        or videos that explain in detail historical events or how things work. I enjoy long-form content 
-                        much more than I do short-form content. I love when I can walk away from a video or documentary with
-                        a greater understanding of something than before I watched it.
-                    </p>
-                    <p class="about_me_text" id="about_me_coding_languages">The coding languages I am most proficient in are Python, C#, and C.<br> 
-                        <b>Python</b> was my most used language while attending Penn State, and I have used it for various 
-                        projects on my own.<br> 
-                        <b>C</b> is my second most used language while attending Penn State, particularly in higher level classes.<br>
-                        <b>C#</b> is the language I have used the most for my personal projects.<br>
-                        Additionally, I have used Java and SQL for classes, although
-                        my exposure to them is more limited than the prior mentioned languages.
-                    </p>
+                    <div class="about_me_text">
+                        I graduated from Pennsylvania State University in August, 2022 with a Bachelor of Science in Computer Science. 
+                        My coursework included Artificial intelligence, Machine Learning, Database Management, Systems Programming, Algorithms and Operating Systems.
+                    </div>
+                    <div class="about_me_text">
+                        Although  I am lacking in proven work experience, I am very eager to grow my skills to become as efficient as possible within the workforce.
+
+                    </div>
                 </div>
                 <div class="grid_item grid_item_image_2">
                     <div class="grid_item_image_2_container">
@@ -56,22 +49,56 @@
                 </div>
             </div>
         </div>
+
+        <!-- below is the tab for the Past Projects tab -->
+
         <div class="tab_content_project" id="project_content">
             <div class="tab_project_tab_container">
-                <input type="radio" class="tab_project_radio" name="project_tabs" id="joint_game_radio" value="joint_game" onchange="radio_project_checked(value)">
+                <input type="radio" class="tab_project_radio" name="project_tabs" 
+                    id="joint_game_radio" value="joint_game" onchange="radio_project_checked(value)">
                 <label for="joint_game_radio" class="tab_project_label">Joint Game</label>
-                <input type="radio" class="tab_project_radio" name="project_tabs" id="test_radio" value="test_tab" onchange="radio_project_checked(value)">
-                <label for="test_radio" class="tab_project_label">test label</label>
+                <input type="radio" class="tab_project_radio" name="project_tabs" 
+                    id="fast_paced_platformer_radio" value="test_tab" onchange="radio_project_checked(value)">
+                <label for="fast_paced_platformer_radio" class="tab_project_label">Fast Platformer</label>
+                <input type="radio" class="tab_project_radio" name="project_tabs" 
+                    id="LoL_subreddit_language_radio" value="LoL_subreddit_ngram_model" onchange="radio_project_checked(value)">
+                <label for="LoL_subreddit_language_radio" class="tab_project_label">Subreddit Language Model</label>
             </div>
             <div class="tab_project_content" id="joint_game">
+                <p class="tab_project_text">
+                    I started this project after watching a video describing the types of joint nodes within the Godot game engine. I am using a primarily using C# for the scripting of game objects, 
+                    and the engine's native language, GDScript, for scripting the control of the game's scenes.
+                </p>
+                <p class="tab_project_text">
+                    Currently, I have implemented a very basic level select menu, control of the player, the goal objects to be collected in each level, and buttons to activate and deactivate connected objects
+                    in the levels. Most of this can be seen in the video below.
+                </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/4A0rD7JijyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="tab_project_content" id="test_tab">blah 2</div>
+            <div class="tab_project_content" id="test_tab">
+
+            </div>
+            <div class="tab_project_content" id="LoL_subreddit_ngram_model">
+                <p class="tab_project_text">
+                    Using the Praw library, I scraped comments from the top 750 posts of all time from the League of Legends subreddit. 
+                    With that data saved, I then created a program to take in a number to create an ngram language model using that data.                    
+                </p>
+                <p class="tab_project_text">
+                    As I was creating and saving the models, I ran into issues of optimization where it could take dozens of minutes to finish creating a model when applying smoothing.
+                    I went through and optimized my smoothing function to better save on space and increase speed, resulting in it taking a couple seconds to create a model instead of minutes.
+                </p>
+                <a class="tab_project_text" style="color:blue"href="https://github.com/SimonMoorleghen-Volpe/LoLSubredditNgramSentences">Here is my github page with sentences generated from the various models stored as text files.</a>
+            </div>
+            
         </div>
+
+        <!-- below is the tab for the contact info tab -->
+
+
         <div class="tab_content_contact" id="contact_content">
             <p class="tab_content_contact_text" >Phone Number: 412-477-4041</p>
             <p class="tab_content_contact_text" >Email: wscvolpe@gmail.com</p>
-            <p class="tab_content_contact_text">I am most likely to respond to emails,</p>
+            <p class="tab_content_contact_text">I am most likely to respond to emails.</p>
             <p class="tab_content_contact_text">I am most consistently available between 2pm and 4pm EST.</p>
         </div>
     </div>
