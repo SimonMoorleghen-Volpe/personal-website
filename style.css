@@ -137,6 +137,7 @@ body {
 }
 .grid_item_image_2_container {
     align-self: center;
+    justify-content: center;
     background-color: black;
     width: clamp(100px, 100%, 350px);
     height: clamp(100px, 100%, 350px);
@@ -182,7 +183,6 @@ body {
     object-fit: contain;
 }
 .about_me_image_2 {
-    margin-left: -1 * clamp(15px, 13%, 200px);
     width: clamp(150px, 130%, 400px);
     height: auto;
     object-fit:cover;
