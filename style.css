@@ -259,8 +259,8 @@ body {
     color: black;
 }
 .tab_project_video_embed {
-    width:clamp(160px, 48vw, 640px);
-    height: clamp(90px, 27vw, 360px);
+    width:clamp(160px, 70vw, 640px);
+    height: clamp(90px, 39vw, 360px);
 }
 
 
