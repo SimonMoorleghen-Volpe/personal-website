@@ -229,6 +229,9 @@ body {
     font-size: .8rem;
     border-width: 0.5em;
     border-color: black;
+    padding-left:0.5em;
+    padding-top: 0.2em;
+    padding-right: 0.5em;
     border: solid;
     border-radius: 25% 25% 0% 0%;
 }
