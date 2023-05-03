@@ -223,7 +223,7 @@ body {
     display: none;
 }
 .tab_project_label {
-    background-color: white;
+    background-color: lightgrey;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: .8rem;
@@ -241,6 +241,7 @@ body {
     border-bottom-width: 0px;
     font-weight: bold;
     font-size: 1rem;
+    background-color: white;
 }
 .tab_project_content {
     flex: 1 1 auto;
